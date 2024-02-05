@@ -1111,7 +1111,7 @@ class Login
             // PrePi
             setcookie(...$args);
         }
-        $args[] = Config::host()->hostname();
+        $args[] = explode(':', Config::host()->hostname())[0];
         $args[] = HTTP_APP_PROTOCOL == 'https';
         $args[] = true;
 
